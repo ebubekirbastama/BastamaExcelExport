@@ -1,6 +1,12 @@
 # BastamaExcelExport
-<h1>Excel Export Kullanımı</h1>
-<p>Eğer açık olarak kullanmak istiyorsanız aşağıdaki gibi kullanabilirsiniz</p>
+
+## Excel Export Kullanımı
+
+Bu kütüphane, Excel verileri aktarmak için kullanışlı bir yol sunar. Aşağıdaki örneklerde nasıl kullanılacağını görebilirsiniz.
+
+### Açık Kullanım
+
+Aşağıdaki örnek, Excel verilerini açık bir şekilde aktarmak için kullanılır:
 
  ```csharp
 using BastamaExcelExport;
@@ -17,7 +23,8 @@ class Program
     }
 }
 ```
-<p>Eğer kapalı olarak kullanmak istiyorsanız aşağıdaki gibi kullanabilirsiniz</p>
+### Kapalı Kullanım
+Aşağıdaki örnek, Excel verilerini kapalı bir şekilde aktarmak için kullanılır:
 
  ```csharp
 using BastamaExcelExport;
@@ -34,3 +41,20 @@ class Program
     }
 }
 ```
+# Excel İmport Kullanımı
+
+Bu kütüphane, bir Excel dosyasından veri okuyarak bir DataTable döndürmenizi sağlar. Daha sonra bu veriyi DataGridView, ListBox, ListView gibi bileşenlere aktarabilirsiniz.
+
+Aşağıdaki örnek, Excel verilerini bir DataGridView kontrolüne aktaran temel bir kod parçası sunar:
+
+## Kullanım Örneği
+
+Aşağıda, bu yöntemi kullanarak Excel verilerini bir DataGridView kontrolüne aktaran örnek bir kod parçası bulunmaktadır:
+
+```csharp
+using (ExcelReader excelReader = new ExcelReader("EBSHarita_Cikti_Verisi.xlsx"))
+{
+    DataTable data = excelReader.ReadData();
+    dataGridView1.DataSource = data;
+}
+
