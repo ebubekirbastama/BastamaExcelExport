@@ -41,6 +41,13 @@ class Program
     }
 }
 ```
+# Excel Export Kullanım Videosu
+[![Video Adı](https://img.youtube.com/vi/KmUc8y01DrM/0.jpg)](https://www.youtube.com/watch?v=KmUc8y01DrM)
+
+
+
+
+
 # Excel İmport Kullanımı
 
 Bu kütüphane, bir Excel dosyasından veri okuyarak bir DataTable döndürmenizi sağlar. Daha sonra bu veriyi DataGridView, ListBox, ListView gibi bileşenlere aktarabilirsiniz.
@@ -57,4 +64,5 @@ using (ExcelReader excelReader = new ExcelReader("EBSHarita_Cikti_Verisi.xlsx"))
     DataTable data = excelReader.ReadData();
     dataGridView1.DataSource = data;
 }
+
 
