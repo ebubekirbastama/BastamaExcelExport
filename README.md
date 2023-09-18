@@ -64,5 +64,6 @@ using (ExcelReader excelReader = new ExcelReader("EBSHarita_Cikti_Verisi.xlsx"))
     DataTable data = excelReader.ReadData();
     dataGridView1.DataSource = data;
 }
-
-
+```
+# Excel İmport Kullanım Videosu
+[![Video Adı](https://img.youtube.com/vi/KmUc8y01DrM/0.jpg)](https://www.youtube.com/watch?v=igKivQL66gM)
